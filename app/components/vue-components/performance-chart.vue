@@ -2,7 +2,7 @@
 <div>
 <p>
   startDate:{{startDate}}
-  EndDate:{{startDate}}
+  EndDate:{{endDate}}
 </p>
   <div class="c-chart__container">
     <v-chart ref="chart" :option="chartOptions" />
@@ -137,7 +137,6 @@ export default {
       }).catch((error)=>console.log(error))
     },
     formatDate(dateInMs) {
-      //console.log(moment(dateInMs).format("DD MMM YYYY"));
       return moment(dateInMs).format("DD MMM YYYY");
     },
     filterData(startdate,enddate){
@@ -146,12 +145,6 @@ export default {
         (date) =>{ (date.date_ms >= startdate && date.date_ms <= enddate)
     }
     );
-   else
-   { 
-     alert("The End date not available");
-     }
-
-  
     }
   },
 };

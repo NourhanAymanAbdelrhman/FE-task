@@ -44,5 +44,5 @@ const store = new Vuex.Store({
   //     context.commit("increment", amount);
   //   },
   // },
-});
+);
 export default store;
