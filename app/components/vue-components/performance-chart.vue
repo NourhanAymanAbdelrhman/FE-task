@@ -140,10 +140,8 @@ export default {
       return moment(dateInMs).format("DD MMM YYYY");
     },
     filterData(startdate,enddate){
-      if(this.chartData[this.chartData.length-1].date_ms>=enddate)
-      this.chartFilter = this.chartData.filter(
-        (date) =>{ (date.date_ms >= startdate && date.date_ms <= enddate)
-    }
+     
+      this.chartFilter = this.chartData.filter((date)=>(date.date_ms >= startdate && date.date_ms <= enddate)
     );
     }
   },
